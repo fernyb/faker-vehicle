@@ -6,7 +6,7 @@ module Faker
     VIN_REGEX = /^[A-Z0-9]{3}[A-Z0-9]{5}[A-Z0-9]{1}[A-Z0-9]{1}[A-Z0-0]{1}[A-Z0-9]{1}\d{5}$/
     MILEAGE_MIN = 10_000
     MILEAGE_MAX = 90_000
-    YAML_PATH = File.expand_path('../vehicle/en-vehicle.yml', __FILE__)
+    YAML_PATH = ::File.expand_path('../vehicle/en-vehicle.yml', __FILE__)
     VEHICLE_YAML = ::YAML.load(File.read(YAML_PATH))
 
     
