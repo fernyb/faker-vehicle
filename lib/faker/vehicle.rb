@@ -1,1 +1,1 @@
-require_relative 'vehicle/vehicle'
+require_relative 'vehicle/vehicle.rb'

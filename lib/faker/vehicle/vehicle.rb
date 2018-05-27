@@ -1,10 +1,10 @@
 require 'faker'
 require "yaml"
 
-module Faker
-  class Vehicle < Base
-    VERSION = "0.1.1"
+class Faker::Vehicle < Faker::Base
+    flexible :vehicle
 
+    VERSION = '0.1.1'
     VIN_REGEX = /^[A-Z0-9]{3}[A-Z0-9]{5}[A-Z0-9]{1}[A-Z0-9]{1}[A-Z0-0]{1}[A-Z0-9]{1}\d{5}$/
     MILEAGE_MIN = 10_000
     MILEAGE_MAX = 90_000
@@ -12,6 +12,7 @@ module Faker
     VEHICLE_YAML = ::YAML.load(::File.read(YAML_PATH))
 
     class << self
+
       def vin
         self.regexify(VIN_REGEX)
       end
@@ -81,5 +82,4 @@ module Faker
         rand(5...10).times.map { VEHICLE_YAML["standard_specs"].sample }
       end
     end
-  end
 end
