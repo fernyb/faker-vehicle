@@ -7,7 +7,7 @@ module Faker
     MILEAGE_MIN = 10_000
     MILEAGE_MAX = 90_000
     YAML_PATH = ::File.expand_path('../vehicle/en-vehicle.yml', __FILE__)
-    VEHICLE_YAML = ::YAML.load(File.read(YAML_PATH))
+    VEHICLE_YAML = ::YAML.load(::File.read(YAML_PATH))
 
     
     class << self
