@@ -1,10 +1,9 @@
 # coding: utf-8
 lib = File.expand_path(File.dirname(__FILE__) + "/lib/faker")
 #$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-$stdout.puts "*** Lib: #{ lib }"
+#$stdout.puts "*** Lib: #{ lib }"
 $LOAD_PATH.unshift(lib)
-
-require_relative 'lib/faker/vehicle.rb'
+require 'vehicle.rb'
 
 Gem::Specification.new do |spec|
   spec.name          = "faker-vehicle"
