@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/fernyb/faker-vehicle"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }.reject {|f| f =~ /\.gem$/ }
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", ">= 1.10"
